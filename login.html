@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="logining">
+    <header>
+        <nav>
+            <ul>
+                <li><a class="textheader" href="dashboard.html">Головна</a></li>
+                <li><a class="textheader" href="info.html">Контакти</a></li>
+                
+            </ul>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='register.html';" id="registerBtn">Зареєструватися</button>
+                <button onclick="window.location.href='login.html';" id="loginBtn">Увійти</button>
+            </div>
+        </nav>
+    </header>
+    <div class="main-log">
+    <div class="regfild">
+    <h1>Вхід</h1>
+   
+    <form class="formreg" action="/auth/login" method="post">
+        <label for="username">Логін </label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button class="button-login" type="submit">Увійти</button>
+    </form>
+    <div class="if-no-login">
+        <p>Немає облікового запису? <a  href="register.html">Зареєструватися тут</a></p>
+    </div>
+</div>
+
+    <script>
+        function closeError() {
+            document.getElementById('error-message').style.display = 'none';
+        }
+    </script>
+    
+    
+    </div>
+    <footer>
+        <p>&copy; 2024 DEREN OLES</p>
+    </footer>
+
+    <script src="public/script.js"></script>
+    
+</body>
+</html>
